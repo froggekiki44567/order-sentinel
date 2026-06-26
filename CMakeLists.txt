@@ -10,6 +10,7 @@ find_package(nlohmann_json REQUIRED)
 
 add_executable(order_sentinel
     src/main.cpp
+    src/ws_client.cpp
 )
 
 target_link_libraries(order_sentinel PRIVATE
