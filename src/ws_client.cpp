@@ -28,7 +28,7 @@ void WsClient::connect(const std::string& host,
     );
 }
 
-// --- Step 1: DNS resolved → open TCP connection ---
+// --- Step 1: DNS resolved
 void WsClient::on_resolve(beast::error_code ec,
                            tcp::resolver::results_type results)
 {
@@ -47,7 +47,7 @@ void WsClient::on_resolve(beast::error_code ec,
     );
 }
 
-// --- Step 2: TCP connected → TLS handshake ---
+// TCP connected
 void WsClient::on_connect(beast::error_code ec,
                            tcp::resolver::results_type::endpoint_type ep)
 {
