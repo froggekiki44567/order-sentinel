@@ -3,9 +3,6 @@
 #include <iostream>
 
 // --- Constructor ---
-// net::make_strand(ioc) creates a "strand" — a serialization wrapper that
-// guarantees callbacks don't run concurrently even if ioc uses multiple threads.
-// For now we have one thread, but it's the correct habit for production async code.
 WsClient::WsClient(net::io_context& ioc,
                    ssl::context&    ctx,
                    MessageCallback  on_message)
